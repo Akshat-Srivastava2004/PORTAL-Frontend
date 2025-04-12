@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Dashboard-Portal
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+</head>
+<body class="">
+    <div class="wrapper ">
+      <div class="sidebar" data-color="orange">
+        <!--
+          Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+      -->
+      <div class="logo">
+        <a href="" class="simple-text logo-mini">
+          TP
+        </a>
+        <a href="" class="simple-text logo-normal">
+        Teacher Portal
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="./dashboard.html">
+              <i class="now-ui-icons design_app"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="./liveclasses.html">
+              <i class="now-ui-icons education_atom"></i>
+              <p> Create Live Class</p>
+            </a>
+          </li>
+          <li>
+            <a href="./">
+              <i class="now-ui-icons location_map-big"></i>
+              <p> Create Daily Quiz</p>
+            </a>
+          </li>
+          <li>
+            <a href="./chat.html">
+              <i class="now-ui-icons ui-1_bell-53"></i>
+              <p>Chat Now</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Your Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./login.html">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Login Now</p>
+            </a>
+          </li>
+          <li>
+            <a href="./Uploadnotes.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Upload Notes</p>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="./Studentdetail.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Student details</p>
+            </a>
+          </li>   -->
+          <!-- <li>
+            <a href="./studentlogin.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Student Login</p>
+            </a>
+          </li> -->
+          <li class="active-pro">
+            <a href="./logout.html">
+              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Student Details</h1>
+            <p>Review and search for enrolled students</p>
+            <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search by Username, Full Name, or Email">
+        </div>
+
+        <table class="student-table" id="studentTable">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Gender</th>
+                    <th>Course Enrolled</th>
+                </tr>
+            </thead>
+           
+                <tbody id="studentTableBody">
+                    <!-- Rows will be dynamically populated here -->
+                </tbody>
+                <!-- Add more student rows as needed -->
+           
+        </table>
+
+        <button class="back-button">Back to Students List</button>
+    </div>
+
+    <style>
+        /* CSS styling for the Student Details page with Table and Search Bar */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin-top: 15vh;
+        
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            width: 2300px;
+            margin-left: 220px;
+            /* width: 90%; */
+            /* max-width: 900px; */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: #0056b3;
+        }
+
+        .header p {
+            color: #666;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .student-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .student-table th, .student-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .student-table th {
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+        }
+
+        .student-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .back-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #004494;
+        }
+    </style>
+
+<script>
+    // Fetch and display student data
+    async function fetchStudentData() {
+        try {
+            const response = await fetch('/studentdetails');
+            console.log("the data is ",response) // Adjust URL if necessary
+            const students = await response.json();
+            console.log("hjghgj",students)
+            
+            const tableBody = document.getElementById("studentTableBody");
+            tableBody.innerHTML = ""; // Clear existing rows
+
+            students.forEach(student => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${student.username}</td>
+                    <td>${student.fullname}</td>
+                    <td>${student.email}</td>
+                    <td>${student.phonenumber}</td>
+                    <td>${student.gender}</td>
+                    <td>${student.courses || 'No courses enrolled'}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        } catch (error) { 
+            console.error("Error fetching student data:",error);
+        }
+    }
+
+    // Search function for the table
+    function searchTable() {
+        const input = document.getElementById("searchInput").value.toUpperCase();
+        const table = document.getElementById("studentTable");
+        const tr = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < tr.length; i++) {
+            const tdUsername = tr[i].getElementsByTagName("td")[0];
+            const tdFullName = tr[i].getElementsByTagName("td")[1];//column ke baare me hain yeah 
+            const tdEmail = tr[i].getElementsByTagName("td")[2];
+            const tdCourse =tr[i].getElementsByTagName("td")[5];
+            
+            if (tdUsername || tdFullName || tdEmail || tdCourse) {
+                const username = tdUsername.textContent || tdUsername.innerText;
+                const fullName = tdFullName.textContent || tdFullName.innerText;
+                const email = tdEmail.textContent || tdEmail.innerText;
+                const course = tdCourse.textContent || tdCourse.innerText;
+
+                if (username.toUpperCase().indexOf(input) > -1 ||
+                    fullName.toUpperCase().indexOf(input) > -1 ||
+                    course.toUpperCase().indexOf(input) > -1 ||
+                    email.toUpperCase().indexOf(input) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }       
+        }
+    }
+
+    // Initialize table with student data on page load
+    window.onload = fetchStudentData;
+</script>
+    <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+</body>
+</html>

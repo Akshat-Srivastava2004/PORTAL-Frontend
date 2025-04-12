@@ -1,0 +1,225 @@
+<!--
+
+=========================================================
+* Now UI Dashboard - v1.5.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/now-ui-dashboard
+* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+
+* Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Dashboard-Portal
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <style>
+ 
+ 
+
+    .container {
+      margin-top: 20vh;
+        background: #27a2ea;
+        width: 100%;
+        max-width: 700px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .container h1 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #444;
+    }
+
+    .message-box {
+        width: 100%;
+        height: 150px;
+        border-radius: 6px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        resize: none;
+        font-size: 16px;
+        margin-bottom: 20px;
+        transition: border-color 0.3s;
+    }
+
+    .message-box:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .send-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .send-button:hover {
+        background-color: #0056b3;
+    }
+
+  /* Existing footer styling */
+.footer {
+    font-size: large;
+    color: white;
+    font-weight: bold;
+}
+
+/* Color animation */
+@keyframes highlightColors {
+    0% { color: #ff4d4d; }
+    25% { color: #2f0ce1; }
+    50% { color: #4dff88; }
+    50% {color: white;}
+    75% { color: #ffdb4d; }
+    100% { color: #ff4d4d; }
+}
+
+.highlight-text {
+    animation: highlightColors 2s infinite;
+}
+
+</style>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+    <div class="logo">
+      <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+        TP
+      </a>
+      <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+      Teacher Portal
+      </a>
+    </div>
+    <div class="sidebar-wrapper" id="sidebar-wrapper">
+      <ul class="nav">
+        <li class="active ">
+          <a href="./dashboard.html">
+            <i class="now-ui-icons design_app"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li>
+          <a href="./liveclasses.html">
+            <i class="now-ui-icons education_atom"></i>
+            <p> Create Live Classes</p>
+          </a>
+        </li>
+        <li>
+          <a href="./map.html">
+            <i class="now-ui-icons location_map-big"></i>
+            <p> Create Daily Quiz</p>
+          </a>
+        </li>
+        <li>
+          <a href="./notifications.html">
+            <i class="now-ui-icons ui-1_bell-53"></i>
+            <p>Chat Now</p>
+          </a>
+        </li>
+        <li>
+          <a href="./user.html">
+            <i class="now-ui-icons users_single-02"></i>
+            <p>Your Profile</p>
+          </a>
+        </li>
+        <li>
+          <a href="./Message.html">
+            <i class="now-ui-icons design_bullet-list-67"></i>
+            <p>Anonymous message</p>
+          </a>
+        </li>
+        <li>
+          <a href="./Uploadnotes.html">
+            <i class="now-ui-icons text_caps-small"></i>
+            <p>Upload Notes</p>
+          </a>
+        </li>
+        <li>
+          <a href="./typography.html">
+            <i class="now-ui-icons text_caps-small"></i>
+            <p>Weekly test</p>
+          </a>
+        </li>
+        <li>
+          <a href="./login.html">
+            <i class="now-ui-icons text_caps-small"></i>
+            <p>Student details</p>
+          </a>
+        </li>  <li>
+          <a href="./studentlogin.html">
+            <i class="now-ui-icons text_caps-small"></i>
+            <p>Student Login</p>
+          </a>
+        </li>
+        <li class="active-pro">
+          <a href="./upgrade.html">
+            <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+            <p>Logout</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+   
+    <form action="/anonymousmessage" method="POST">
+    <div class="container">
+        <h1>Send an Anonymous Message</h1>
+        <textarea class="message-box" name="message" placeholder="Type your message here..."></textarea>
+        <button class="send-button">Send Message</button>
+        <p class="footer highlight-text"><strong>Message will remain completely anonymous.</strong></p>
+
+    </div>
+  </form>
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+</body>
+
+</html>

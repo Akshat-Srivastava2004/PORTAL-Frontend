@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Dashboard-Portal
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <style>
+
+  
+    
+    .container {
+    margin-top: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        padding: 20px;
+    }
+    
+    .thankyou-box {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .thankyou-box h1 {
+        color: #4caf50;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .thankyou-box p {
+        font-size: 18px;
+        color: #333333;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .thankyou-box a.home-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+    
+    .thankyou-box a.home-btn:hover {
+        background-color: #45a049;
+    }
+    
+        </style>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+    <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          SP
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+         Student Portal
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="./studentindex.html">
+              <i class="now-ui-icons design_app"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="./Display_class.html">
+              <i class="now-ui-icons education_atom"></i>
+              <p> Attend Live Classes</p>
+            </a>
+          </li>
+          <li>
+            <a href="./Quiz.html">
+              <i class="now-ui-icons location_map-big"></i>
+              <p> Attend Daily Quiz</p>
+            </a>
+          </li>
+         
+          <li>
+            <a href="./user.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>Your Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./Message.html">
+              <i class="now-ui-icons design_bullet-list-67"></i>
+              <p>Message box </p>
+            </a>
+          </li>
+          <li>
+            <a href="./Uploadnotes.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Ask Doubt</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p> Attend Weekly test</p>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="./typography.html">
+              <i class="now-ui-icons text_caps-small"></i>
+              <p>Logout</p>
+            </a>
+          </li>-->
+          <li class="active-pro">
+            <a href="./upgrade.html">
+              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+              <p>Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+    
+        <div class="container">
+            <div class="thankyou-box">
+                <h1>Thank You!</h1>
+                <p>Thank you for taking the test. We appreciate your time and effort.</p>
+                <p>Your results will be <strong>emailed </strong> to you shortly, and they will also be available on your <strong>dashboard</strong> for quick access.</p>
+                <p>If you have any questions, feel free to reach out to our <strong>support team.</strong></p>
+                <a href="./studentindex.html" class="home-btn">Go Back to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      demo.initGoogleMaps();
+    });
+  </script>
+</body>
+
+</html>
